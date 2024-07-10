@@ -1,1 +1,1 @@
-# event-restaurant-tracker
+# Eventful Bites App
