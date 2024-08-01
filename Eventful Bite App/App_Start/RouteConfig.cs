@@ -18,6 +18,13 @@ namespace Eventful_Bite_App
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+
+            routes.MapRoute(
+            name: "RestaurantDetails",
+            url: "details/{id}",
+            defaults: new { controller = "Restaurant", action = "Details", id = UrlParameter.Optional }
+);
         }
     }
 }

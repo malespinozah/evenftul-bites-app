@@ -191,13 +191,19 @@
     <Compile Include="Migrations\202407301959172_event-and-district.Designer.cs">
       <DependentUpon>202407301959172_event-and-district.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408011735337_restaurant-branches-table.cs" />
+    <Compile Include="Migrations\202408011735337_restaurant-branches-table.designer.cs">
+      <DependentUpon>202408011735337_restaurant-branches-table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\DetailsDistrict.cs" />
     <Compile Include="Models\District.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -306,6 +312,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202407301959172_event-and-district.resx">
       <DependentUpon>202407301959172_event-and-district.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408011735337_restaurant-branches-table.resx">
+      <DependentUpon>202408011735337_restaurant-branches-table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
