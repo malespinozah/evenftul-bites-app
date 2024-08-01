@@ -1,0 +1,27 @@
+﻿﻿﻿@model Eventful_Bite_App.Models.BranchDto
+
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2><a href="/Restaurant/Details/@Model.RestaurantId">@Model.RestaurantName</a> (@Model.Location)</h2>
+
+<h5 style="margin-top:2rem; text-decoration:underline">Branch Details</h5>
+
+
+<div>
+    <div style="display:none">Branch ID: @Model.BranchId</div>
+    <div style="display:none">Restaurant ID: @Model.RestaurantId</div>
+    <div style="margin-top:1rem;"><strong>Location:</strong> @Model.Location</div>
+    <div><strong>Status:</strong> @Model.Status</div>
+    <div><strong>Review:</strong> @Model.Review</div>
+    <div><strong>Address:</strong> @Model.Address</div>
+
+</div>
+
+<div style="margin-top: 1.5rem;">
+    <a href="/Branch/Edit/@Model.BranchId" class="btn btn-primary" role="button">Update</a>
+    <a href="/Branch/DeleteConfirm/@Model.BranchId" class="btn btn-danger" role="button">Delete</a>
+    <a href="/Branch/List" class="btn btn-outline-secondary" role="button">Back to Branch List</a>
+</div>
