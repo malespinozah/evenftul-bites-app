@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Eventful_Bite_App.Models
 {
-    public class DetailsDistric
+    public class DetailsDistrict
     {
         public DistrictDto SelectedDistrict { get; set; }
         public IEnumerable<EventDto> KeptEvents { get; set; }

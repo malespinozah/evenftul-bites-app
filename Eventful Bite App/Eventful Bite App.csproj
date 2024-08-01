@@ -193,7 +193,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\DetailsDistric.cs" />
+    <Compile Include="Models\DetailsDistrict.cs" />
     <Compile Include="Models\District.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\IdentityModels.cs" />
