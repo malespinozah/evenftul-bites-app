@@ -9,6 +9,6 @@ namespace Eventful_Bite_App.Models
     {
         public DistrictDto SelectedDistrict { get; set; }
         public IEnumerable<EventDto> KeptEvents { get; set; }
-
+        public IEnumerable<BranchDto> Branches { get; set; } = new List<BranchDto>();
     }
 }

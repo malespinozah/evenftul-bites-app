@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
@@ -50,25 +51,46 @@ namespace Eventful_Bite_App.Controllers
         /// <param name="id">The ID of the district to retrieve.</param>
         /// <returns>Returns the Details view with the selected district details and related events.</returns>
         // GET: District/Details/{id}
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Details(int id)
         {
-            //objective: communicate with our District data api to retrieve one Event
-            //curl https://localhost:44301/api/DistrictData/FindDistrict/{id}
-
             DetailsDistrict ViewModel = new DetailsDistrict();
 
-            string url = "https://localhost:44301/api/DistrictData/FindDistrict/" + id;
-            HttpResponseMessage response = client.GetAsync(url).Result;
+            // Fetch district details
+            string url = $"https://localhost:44301/api/DistrictData/FindDistrict/{id}";
+            HttpResponseMessage response = await client.GetAsync(url);
+            if (response.IsSuccessStatusCode)
+            {
+                ViewModel.SelectedDistrict = await response.Content.ReadAsAsync<DistrictDto>();
+            }
+            else
+            {
+                // Handle error or return a view with an error message
+                return View("Error");
+            }
 
-            DistrictDto SelectedDistrict = response.Content.ReadAsAsync<DistrictDto>().Result;
+            // Fetch events for the district
+            url = $"https://localhost:44301/api/EventData/ListEventsForDistrict/{id}";
+            response = await client.GetAsync(url);
+            if (response.IsSuccessStatusCode)
+            {
+                ViewModel.KeptEvents = await response.Content.ReadAsAsync<IEnumerable<EventDto>>();
+            }
+            else
+            {
+                ViewModel.KeptEvents = new List<EventDto>(); // Ensure KeptEvents is not null
+            }
 
-            ViewModel.SelectedDistrict = SelectedDistrict;
-
-            url = "https://localhost:44301/api/EventData/ListEventsForDistrict/" + id;
-            response = client.GetAsync(url).Result;
-            IEnumerable<EventDto> RelatedEvents = response.Content.ReadAsAsync<IEnumerable<EventDto>>().Result;
-
-            ViewModel.KeptEvents = RelatedEvents;
+            // Fetch branches for the district (assuming district name matches location)
+            url = $"https://localhost:44301/api/BranchData/ListBranchesByLocation/{ViewModel.SelectedDistrict.DistrictName}";
+            HttpResponseMessage branchesResponse = await client.GetAsync(url);
+            if (branchesResponse.IsSuccessStatusCode)
+            {
+                ViewModel.Branches = await branchesResponse.Content.ReadAsAsync<IEnumerable<BranchDto>>();
+            }
+            else
+            {
+                ViewModel.Branches = new List<BranchDto>(); // Ensure Branches is not null
+            }
 
             return View(ViewModel);
         }
