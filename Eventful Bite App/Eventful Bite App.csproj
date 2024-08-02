@@ -188,6 +188,7 @@
     <Compile Include="Controllers\DistrictDataController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\EventDataController.cs" />
+    <Compile Include="Controllers\EventJournalController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
@@ -305,6 +306,8 @@
     <Content Include="Views\Event\Details.cshtml" />
     <Content Include="Views\Event\DeleteConfirm.cshtml" />
     <Content Include="Views\Event\Create.cshtml" />
+    <Content Include="Views\EventJournal\District.cshtml" />
+    <Content Include="Views\EventJournal\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
