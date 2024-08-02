@@ -3,15 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Eventful_Bite_App_20240730034742/True/SqlTable/dbo.Branches.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\male_\\desktop\\evenftul-bites-app\\eventful bite app\\controllers\\branchdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\controllers\\branchdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\male_\\desktop\\evenftul-bites-app\\eventful bite app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\male_\\desktop\\evenftul-bites-app\\eventful bite app\\views\\restaurant\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|C:\\Users\\male_\\Desktop\\evenftul-bites-app\\eventful bite app\\views\\restaurant\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\views\\restaurant\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\male_\\desktop\\evenftul-bites-app\\eventful bite app\\views\\district\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|C:\\Users\\male_\\Desktop\\evenftul-bites-app\\eventful bite app\\views\\district\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\views\\district\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -22,11 +29,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dbo.Branches [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Eventful_Bite_App_20240730034742/True/SqlTable/dbo.Branches.sql",
+              "ToolTip": "dbo.Branches [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-08-02T02:12:03.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "BranchDataController.cs",
+              "DocumentMoniker": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Controllers\\BranchDataController.cs",
+              "RelativeDocumentMoniker": "Eventful Bite App\\Controllers\\BranchDataController.cs",
+              "ToolTip": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Controllers\\BranchDataController.cs",
+              "RelativeToolTip": "Eventful Bite App\\Controllers\\BranchDataController.cs",
+              "ViewState": "AQIAAAUBAAAAAAAAAAAiwAoBAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T02:09:54.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "List.cshtml",
               "DocumentMoniker": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Views\\Restaurant\\List.cshtml",
               "RelativeDocumentMoniker": "Eventful Bite App\\Views\\Restaurant\\List.cshtml",
@@ -34,12 +64,11 @@
               "RelativeToolTip": "Eventful Bite App\\Views\\Restaurant\\List.cshtml",
               "ViewState": "AQIAAAMAAAAAAAAAAADwvwkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-02T01:50:06.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-02T01:50:06.801Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "List.cshtml",
               "DocumentMoniker": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Views\\District\\List.cshtml",
               "RelativeDocumentMoniker": "Eventful Bite App\\Views\\District\\List.cshtml",
@@ -47,12 +76,11 @@
               "RelativeToolTip": "Eventful Bite App\\Views\\District\\List.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-02T01:49:54.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-02T01:49:54.716Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Eventful Bite App\\Views\\Shared\\_Layout.cshtml",

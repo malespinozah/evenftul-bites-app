@@ -250,5 +250,45 @@ namespace Eventful_Bite_App.Controllers
 
         return branchDtos;
     }
-}
+
+        /// <summary>
+        /// Gets list of branches by Location
+        /// </summary>
+        /// <param name="location">Branch Location</param>
+        /// <returns>
+        /// List of branches that match the location
+        /// </returns>
+        /// <example>
+        /// //GET: /api/BranchData/ListBranchesByLocation/North York -> [{"BranchId":"1", "RestaurantId": "1", "Status": "Visited", "Rating": "4.00"}, {"BranchId":"2", "RestaurantId": "1", "Status": "Not Visited", "Rating": "4.50"}]
+        /// </example>
+        // Filtering
+        // GET: api/BranchData/ListBranchesByLocation/{location}
+        [HttpGet]
+        [Route("api/BranchData/ListBranchesByLocation/{location}")]
+        public IEnumerable<BranchDto> ListBranchesByLocation(string location)
+        {
+            List<Branch> branches = db.Branches.Where(b => b.Location.Equals(location, StringComparison.OrdinalIgnoreCase)).ToList();
+            List<BranchDto> branchDtos = new List<BranchDto>();
+
+            foreach (Branch branch in branches)
+            {
+                BranchDto branchDto = new BranchDto
+                {
+                    BranchId = branch.BranchId,
+                    RestaurantId = branch.RestaurantId,
+                    Status = branch.Status,
+                    Review = branch.Review,
+                    Location = branch.Location,
+                    Address = branch.Address,
+                    RestaurantName = branch.Restaurant.RestaurantName,
+                    RestaurantType = branch.Restaurant.RestaurantType,
+                    Cuisine = branch.Restaurant.Cuisine,
+                    Budget = branch.Restaurant.Budget,
+                };
+                branchDtos.Add(branchDto);
+            }
+
+            return branchDtos;
+        }
+    }
 }
