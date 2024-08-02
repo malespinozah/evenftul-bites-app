@@ -1,0 +1,21 @@
+﻿@model Eventful_Bite_App.Models.DetailsDistrict
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Events in @Model.SelectedDistrict.DistrictName District</h2>
+
+<ol>
+    @foreach (var Event in Model.KeptEvents)
+    {
+
+        <li>
+            <a href="/Event/Details/@Event.EventId" class="citylist">@Event.EventName</a>
+        </li>
+
+    }
+</ol>
+
+<div>
+    <a href="/District/List" class="goback">Go back to list</a>
+</div>

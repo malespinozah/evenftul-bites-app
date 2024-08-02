@@ -1,0 +1,43 @@
+﻿@model Eventful_Bite_App.Models.EventDto
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.EventName</h2>
+
+<div>
+    Information:
+    <span> @Model.EventDescription</span>
+</div>
+
+<div>
+    Date:
+    <span> @Model.EventDate.ToString("yyyy-MM-dd")</span>
+</div>
+
+<div>
+    Time:
+    <span> @Model.EventTime</span>
+</div>
+
+<div>
+    Price:
+    <span> @Model.EventPrice</span>
+</div>
+
+<div>
+    Address:
+    <span> @Model.EventAddress</span>
+</div>
+
+<div>
+    District:
+    <span> @Model.DistrictName</span>
+</div>
+
+<div class="btnControls">
+    <a href="/Event/DeleteConfirm/@Model.EventId" class="deleteEvent">Delete</a>
+    <a href="/Event/Edit/@Model.EventId" class="updateEvent">Update</a>
+    <a href="/District/List" class="goback">Go back to list</a>
+</div>
+

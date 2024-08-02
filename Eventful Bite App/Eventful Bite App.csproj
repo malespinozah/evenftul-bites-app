@@ -184,6 +184,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BranchController.cs" />
     <Compile Include="Controllers\BranchDataController.cs" />
+    <Compile Include="Controllers\DistrictController.cs" />
+    <Compile Include="Controllers\DistrictDataController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\EventDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
@@ -294,6 +298,13 @@
     <Content Include="Views\Branch\Edit.cshtml" />
     <Content Include="Views\Branch\ListByRestaurant.cshtml" />
     <Content Include="Views\Branch\DeleteConfirm.cshtml" />
+    <Content Include="Views\District\List.cshtml" />
+    <Content Include="Views\District\Details.cshtml" />
+    <Content Include="Views\Event\List.cshtml" />
+    <Content Include="Views\Event\Edit.cshtml" />
+    <Content Include="Views\Event\Details.cshtml" />
+    <Content Include="Views\Event\DeleteConfirm.cshtml" />
+    <Content Include="Views\Event\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

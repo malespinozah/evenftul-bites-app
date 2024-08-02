@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Eventful_Bite_App.Models.EventDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List All Events</h2>
+
+<div class="events">
+    @foreach (var Event in Model)
+    {
+        <div>
+            <a href="Details/@Event.EventId"> @Event.EventName</a>
+        </div>
+    }
+</div>

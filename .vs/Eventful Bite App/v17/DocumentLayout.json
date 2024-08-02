@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\male_\\desktop\\evenftul-bites-app\\eventful bite app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\male_\\desktop\\evenftul-bites-app\\eventful bite app\\views\\restaurant\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\views\\restaurant\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\male_\\desktop\\evenftul-bites-app\\eventful bite app\\views\\district\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\views\\district\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Views\\Restaurant\\List.cshtml",
+              "RelativeDocumentMoniker": "Eventful Bite App\\Views\\Restaurant\\List.cshtml",
+              "ToolTip": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Views\\Restaurant\\List.cshtml",
+              "RelativeToolTip": "Eventful Bite App\\Views\\Restaurant\\List.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAADwvwkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-02T01:50:06.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Views\\District\\List.cshtml",
+              "RelativeDocumentMoniker": "Eventful Bite App\\Views\\District\\List.cshtml",
+              "ToolTip": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Views\\District\\List.cshtml",
+              "RelativeToolTip": "Eventful Bite App\\Views\\District\\List.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-02T01:49:54.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Eventful Bite App\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Eventful Bite App\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-02T01:43:16.952Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
