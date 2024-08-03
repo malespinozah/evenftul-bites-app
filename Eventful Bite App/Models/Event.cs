@@ -49,7 +49,6 @@ namespace Eventful_Bite_App.Models
         public string EventTime { get; set; }
         public decimal EventPrice { get; set; }
         public string EventAddress { get; set; }
-
         public int DistrictId { get; set; }
         public string DistrictName { get; set; }
     }

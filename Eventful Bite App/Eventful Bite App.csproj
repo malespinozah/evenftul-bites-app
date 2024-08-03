@@ -190,6 +190,8 @@
     <Compile Include="Controllers\EventDataController.cs" />
     <Compile Include="Controllers\EventJournalController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JournalController.cs" />
+    <Compile Include="Controllers\JournalDataController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Controllers\RestaurantDataController.cs" />
@@ -204,6 +206,10 @@
     <Compile Include="Migrations\202408011735337_restaurant-branches-table.designer.cs">
       <DependentUpon>202408011735337_restaurant-branches-table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408021736382_Journals-Listing.cs" />
+    <Compile Include="Migrations\202408021736382_Journals-Listing.Designer.cs">
+      <DependentUpon>202408021736382_Journals-Listing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Branch.cs" />
@@ -211,6 +217,7 @@
     <Compile Include="Models\District.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Journal.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -308,6 +315,12 @@
     <Content Include="Views\Event\Create.cshtml" />
     <Content Include="Views\EventJournal\District.cshtml" />
     <Content Include="Views\EventJournal\Details.cshtml" />
+    <Content Include="Views\Journal\List.cshtml" />
+    <Content Include="Views\Journal\Details.cshtml" />
+    <Content Include="Views\Journal\Error.cshtml" />
+    <Content Include="Views\Journal\Edit.cshtml" />
+    <Content Include="Views\Journal\DeleteConfirm.cshtml" />
+    <Content Include="Views\Journal\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -345,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408011735337_restaurant-branches-table.resx">
       <DependentUpon>202408011735337_restaurant-branches-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408021736382_Journals-Listing.resx">
+      <DependentUpon>202408021736382_Journals-Listing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

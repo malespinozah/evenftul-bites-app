@@ -28,11 +28,9 @@ namespace Eventful_Bite_App.Models
         // Gateway between C# and Database
         public DbSet<District> Districts { get; set; }
         public DbSet<Event> Events { get; set; }
-
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Branch> Branches { get; set; }
-
-
+        public DbSet<Journal> Journals { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

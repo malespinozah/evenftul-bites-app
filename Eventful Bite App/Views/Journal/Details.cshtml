@@ -1,0 +1,19 @@
+﻿@model Eventful_Bite_App.Models.JournalDto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.JournalTitle</h2>
+
+
+<div><a href="/Journal/DeleteConfirm/@Model.JournalId">Delete Entry</a></div>
+<a href="/Journal/List">Return to Journal List</a>
+
+<div>
+    <div><a href="/Journal/Edit/@Model.JournalId">Edit Journal Entry</a></div>
+    <div>Description:</div>
+    <div>@Model.JournalDescription</div>
+    <div>Date: @Model.EntryDate</div>
+</div>
+
