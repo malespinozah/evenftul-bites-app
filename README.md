@@ -11,17 +11,17 @@ the events section.
 - Rosalia (Rose) Victoria Sousa Castro - Section 0NB
 
 ### Members Collaboration
-**Maria
+**Maria**
  - Events CRUD
  - Dsitrict CRUD
  - Integration between Events and Restaurants
 
-**Cherry
+**Cherry**
 - Restaurants CRUD
 - Branches CRUD
 - Integration between Events and Restaurants
 
-**Rose
+**Rose**
 - Journals CRUD
 - Integration between Events, Restaurants and Journal Entry *(In Progress)*
 - README
