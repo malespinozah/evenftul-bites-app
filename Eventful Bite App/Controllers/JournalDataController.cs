@@ -60,6 +60,12 @@ namespace Eventful_Bite_App.Controllers
         public IHttpActionResult FindJournalEntry(int id)
         {
             Journal Journal = db.Journals.Find(id);
+
+            // Check if the journal entry is not found
+            if (Journal == null)
+            {
+                return NotFound();
+            }
             JournalDto JournalDto = new JournalDto();
 
             JournalDto.JournalId = Journal.JournalId;
@@ -92,8 +98,8 @@ namespace Eventful_Bite_App.Controllers
         /// </example>
 
         [HttpPost]
-        [Route("api/EventJournal/Details/{id}")] //Not sure if this might work, since the controller was created on a separate page????
-
+        //[Route("api/EventJournal/Details/{id}")] //Not sure if this might work, since the controller was created on a separate page????
+        [Route("api/JournalData/AddJournalEntry")]
         [ResponseType(typeof(Journal))]
 
         public IHttpActionResult AddJournalEntry(Journal Journal)
