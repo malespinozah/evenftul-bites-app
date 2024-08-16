@@ -93,6 +93,7 @@ namespace Eventful_Bite_App.Controllers
 
 
         // POST: Restaurant/Update/5
+        [Authorize]
         [HttpPost]
         public ActionResult Update(int id, Restaurant Restaurant)
         {
@@ -143,6 +144,7 @@ namespace Eventful_Bite_App.Controllers
 
 
         // POST: Restaurant/Create
+        [Authorize]
         [HttpPost]
         public ActionResult Create(Restaurant Restaurant)
         {

@@ -101,6 +101,7 @@ namespace Eventful_Bite_App.Controllers
 
 
         // POST: Branch/Update/5
+        [Authorize]
         [HttpPost]
         public ActionResult Update(int id, Branch Branch)
         {
@@ -165,6 +166,7 @@ namespace Eventful_Bite_App.Controllers
 
 
         // POST: Branch/Create
+        [Authorize]
         [HttpPost]
         public ActionResult Create(Branch Branch)
         {
@@ -217,6 +219,7 @@ namespace Eventful_Bite_App.Controllers
         }
 
         // POST: Branch/Delete/5
+        [Authorize]
         [HttpPost]
         public ActionResult Delete(int id)
         {
@@ -260,10 +263,5 @@ namespace Eventful_Bite_App.Controllers
 
 
     }
-
-
-
-
-
 
 }

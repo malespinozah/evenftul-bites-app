@@ -11,6 +11,5 @@ namespace Eventful_Bite_App.Models
         public EventDto Event { get; set; }
         public IEnumerable<BranchDto> Branches { get; set; }
 
-
     }
 }

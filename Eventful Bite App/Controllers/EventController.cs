@@ -58,12 +58,23 @@ namespace Eventful_Bite_App.Controllers
             //curl https://localhost:44301/api/EventData/FindEvents/{id}
 
             HttpClient client = new HttpClient();
-            string url = "https://localhost:44301/api/EventData/FindEvents/" + id;
-            HttpResponseMessage response = client.GetAsync(url).Result;
+            string eventUrl = "https://localhost:44301/api/EventData/FindEvents/" + id;
+            HttpResponseMessage eventResponse = client.GetAsync(eventUrl).Result;
 
-            EventDto Event = response.Content.ReadAsAsync<EventDto>().Result;
+            EventDto eventDto = eventResponse.Content.ReadAsAsync<EventDto>().Result;
 
-            return View(Event);
+            //fetch branches in the same district or location
+            string branchUrl = $"https://localhost:44301/api/BranchData/ListBranchesByLocation/{eventDto.DistrictName}";
+            HttpResponseMessage branchResponse = client.GetAsync(branchUrl).Result;
+            IEnumerable<BranchDto> branches = branchResponse.Content.ReadAsAsync<IEnumerable<BranchDto>>().Result;
+
+            // Create and populate the view model
+            var viewModel = new EventDetails
+            {
+                Event = eventDto,
+                Branches = branches
+            };
+            return View(viewModel);
         }
 
         /// <summary>
@@ -72,7 +83,7 @@ namespace Eventful_Bite_App.Controllers
         /// <param name="id">The ID of the Event to retrieve.</param>
         /// <returns>Returns the Details view with the selected Event details.</returns>
         // GET: Event/Create
-       // [Authorize]
+       [Authorize]
         public ActionResult Create()
         {
             return View();

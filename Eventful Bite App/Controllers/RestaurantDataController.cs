@@ -99,6 +99,7 @@ namespace Eventful_Bite_App.Controllers
         /// Returns Bad Request/Not found along with the status code if update is invalid
         /// </returns>
         // POST: api/RestaurantData/UpdateRestaurant/2
+    
         [ResponseType(typeof(void))]
         [HttpPost]
         [Route("api/restaurantdata/updaterestaurant/{id}")]

@@ -3,7 +3,7 @@
     ViewBag.Title = "Details";
 }
 
-<form action="/" method="post">
+<form action="/Journal/Create" method="post">
 
     <h2>Restaurant and Events in @Model.SelectedDistrict.DistrictName District</h2>
 
@@ -11,10 +11,10 @@
         <h3>2. Select Event</h3>
         @if (Model.KeptEvents != null && Model.KeptEvents.Any())
         {
-            <select>
+            <select name="EventName">
                 @foreach (var Event in Model.KeptEvents)
                 {
-                    <option value="@Event.EventId">@Event.EventName</option>
+                    <option value="@Event.EventName">@Event.EventName</option>
                 }
             </select>
         }
@@ -30,10 +30,10 @@
         <h3>3. Select Restaurant</h3>
         @if (Model.Branches != null && Model.Branches.Any())
         {
-            <select>
+            <select name="RestaurantName">
                 @foreach (var branch in Model.Branches)
                 {
-                    <option value="@branch.BranchId">@branch.RestaurantName</option>
+                    <option value="@branch.RestaurantName">@branch.RestaurantName</option>
                 }
             </select>
         }
@@ -45,9 +45,9 @@
 
     <div class="experience">
         <h3>4. Record your experience</h3>
-        <textarea></textarea>
+        <input type="text" name="JournalTitle" placeholder="Title" />
+        <textarea name="JournalDescription" placeholder="Description"></textarea>
     </div>
-
 
 
     <button type="submit" class="btn btn-primary">Add Journal Entry</button>
@@ -57,3 +57,11 @@
 <div>
     <a href="/EventJournal/District" class="goback">Go back to list</a>
 </div>
+
+
+<style>
+    .experience {
+        display: flex;
+        flex-direction: column;
+    }
+</style>

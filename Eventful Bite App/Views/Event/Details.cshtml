@@ -1,53 +1,68 @@
-﻿@model Eventful_Bite_App.Models.EventDto
+﻿@model Eventful_Bite_App.Models.EventDetails
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>@Model.EventName</h2>
+<h2>@Model.Event.EventName</h2>
 
 <div>
     Information:
-    <span> @Model.EventDescription</span>
+    <span> @Model.Event.EventDescription</span>
 </div>
 
 <div>
     Date:
-    <span> @Model.EventDate.ToString("yyyy-MM-dd")</span>
+    <span> @Model.Event.EventDate.ToString("yyyy-MM-dd")</span>
 </div>
 
 <div>
     Time:
-    <span> @Model.EventTime</span>
+    <span> @Model.Event.EventTime</span>
 </div>
 
 <div>
     Price:
-    <span> @Model.EventPrice</span>
+    <span> @Model.Event.EventPrice</span>
 </div>
 
 <div>
     Address:
-    <span> @Model.EventAddress</span>
+    <span> @Model.Event.EventAddress</span>
 </div>
 
 <div>
     District:
-    <span> @Model.DistrictName</span>
+    <span> @Model.Event.DistrictName</span>
 </div>
 
 <div class="btnControls">
-    <a href="/Event/DeleteConfirm/@Model.EventId" class="deleteEvent">Delete</a>
-    <a href="/Event/Edit/@Model.EventId" class="updateEvent">Update</a>
+    <a href="/Event/DeleteConfirm/@Model.Event.EventId" class="deleteEvent">Delete</a>
+    <a href="/Event/Edit/@Model.Event.EventId" class="updateEvent">Update</a>
     <a href="/District/List" class="goback">Go back to list</a>
 </div>
 
-<hr/>
+<hr />
 
 @*<h3>Branches in the Same District</h3>
+    <ul>
+        @foreach (var branch in Model.Branches)
+        {
+            <li>@branch.BranchName - @branch.Address</li>
+        }
+    </ul>*@
+
+<h3>@Model.Event.DistrictName Restaurants Nearby</h3>
 <ul>
-    @foreach (var branch in Model.Branches)
+    @if (Model.Branches != null && Model.Branches.Any())
     {
-        <li>@branch.BranchName - @branch.Address</li>
+        foreach (var branch in Model.Branches)
+        {
+            <li><a href="/Branch/Details/@branch.BranchId">@branch.RestaurantName</a></li>
+        }
     }
-</ul>*@
+    else
+    {
+        <li>No branches found.</li>
+    }
+</ul>
 
