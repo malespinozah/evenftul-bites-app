@@ -43,7 +43,7 @@
     <div class="experience">
         <h3>4. Record your experience</h3>
         <input type="text" name="JournalTitle" placeholder="Title" />
-        <textarea name="JournalDescription" placeholder="Description"></textarea>
+        <textarea class="input-box" name="JournalDescription" placeholder="Description"></textarea>
     </div>
 
     <button type="submit" class="btn btn-primary">Add Journal Entry</button>
@@ -58,5 +58,11 @@
     .experience {
         display: flex;
         flex-direction: column;
+    }
+
+    .input-box {
+        width: 400px;
+        height: 50px;
+        padding-top: 10px;
     }
 </style>
