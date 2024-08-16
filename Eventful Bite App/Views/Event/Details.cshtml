@@ -41,3 +41,13 @@
     <a href="/District/List" class="goback">Go back to list</a>
 </div>
 
+<hr/>
+
+@*<h3>Branches in the Same District</h3>
+<ul>
+    @foreach (var branch in Model.Branches)
+    {
+        <li>@branch.BranchName - @branch.Address</li>
+    }
+</ul>*@
+

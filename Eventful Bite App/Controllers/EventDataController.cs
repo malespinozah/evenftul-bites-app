@@ -173,5 +173,55 @@ namespace Eventful_Bite_App.Controllers
             return db.Events.Count(e => e.EventId == id) > 0;
         }
 
+
+
+
+        /// <summary>
+        /// Gets a list of events by Branch Location
+        /// </summary>
+        /// <param name="location">Branch Location</param>
+        /// <returns>
+        /// List of events that match the branch location
+        /// </returns>
+        /// <example>
+        /// //GET: /api/EventData/ListEventsByLocation/Markham -> [{"EventId":"1", "Name": "Food Festival", "Date": "2024-08-20"}, {"EventId":"2", "Name": "Music Night", "Date": "2024-08-22"}]
+        /// </example>
+        // Filtering
+        // GET: api/EventData/ListEventsByLocation/{location}
+        [HttpGet]
+        [Route("api/EventData/ListEventsByLocation/{location}")]
+        public IEnumerable<EventDto> ListEventsByLocation(string location)
+        {
+            // Fetch the events matching the location
+            List<Event> events = db.Events.Where(e => e.District.DistrictName.Equals(location, StringComparison.OrdinalIgnoreCase)).ToList();
+            List<EventDto> eventDtos = new List<EventDto>();
+
+            // Map Event entities to Event DTOs
+            foreach (Event evt in events)
+            {
+                EventDto eventDto = new EventDto
+                {
+                    EventId = evt.EventId,
+                    EventName = evt.EventName,
+                    EventDescription = evt.EventDescription,
+                    EventDate = evt.EventDate,
+                    EventTime = evt.EventTime,
+                    EventPrice = evt.EventPrice,
+                    EventAddress = evt.EventAddress,
+                    DistrictId = evt.DistrictId,
+                    DistrictName = evt.District.DistrictName
+
+                };
+                eventDtos.Add(eventDto);
+            }
+
+            return eventDtos;
+        }
+
+
+
+
+        
     }
 }
+

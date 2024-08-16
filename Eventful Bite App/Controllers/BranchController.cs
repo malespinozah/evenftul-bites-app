@@ -49,19 +49,32 @@ namespace Eventful_Bite_App.Controllers
         public ActionResult Details(int id)
         {
             //objective: communicate with our restarurant branch data api to retrieve details of one single branch 
-            //curl https://localhost:44301/api/restaurantdata/findbranch/{id}
+            //curl https://localhost:44301/api/branchdata/findbranch/{id}
 
             string url = "findbranch/" + id;
-            HttpResponseMessage response = client.GetAsync(url).Result;
+            HttpResponseMessage branchResponse = client.GetAsync(url).Result;
 
             //Debug.WriteLine("The response code is ");
             //Debug.WriteLine(response.StatusCode);
 
-            BranchDto SelectedBranch = response.Content.ReadAsAsync<BranchDto>().Result;
+            BranchDto SelectedBranch = branchResponse.Content.ReadAsAsync<BranchDto>().Result;
             //Debug.WriteLine("branch received : ");
-            //Debug.WriteLine(selectedbranch.RestaurantId.RestaurantName);
+            //Debug.WriteLine(SelectedBranch.RestaurantId.RestaurantName);
 
-            return View(SelectedBranch);
+            //Fetcch events based on the branch location
+            string location = SelectedBranch.Location;
+            string eventsUrl = "https://localhost:44301/api/eventdata/listeventsbylocation/" + location;
+
+            HttpResponseMessage eventsResponse = client.GetAsync(eventsUrl).Result;
+            IEnumerable<EventDto> events = eventsResponse.Content.ReadAsAsync<IEnumerable<EventDto>>().Result;
+
+            var viewModel = new BranchDetails
+            {
+                Branch = SelectedBranch,
+                Events = events
+            };
+
+            return View(viewModel);
         }
 
 

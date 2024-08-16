@@ -16,20 +16,22 @@
     }
 </ol>
 
-@*<h3>Branches</h3>
+<h3>Restaurant Branches in @Model.SelectedDistrict.DistrictName</h3>
 @if (Model.Branches != null && Model.Branches.Any())
 {
-    <select>
+    <ol>
         @foreach (var branch in Model.Branches)
         {
-            <option value="@branch.BranchId">@branch.RestaurantName</option>
+            <li>
+                <a href="/Branch/Details/@branch.BranchId">@branch.RestaurantName</a>
+            </li>
         }
-    </select>
+    </ol>
 }
 else
 {
     <p>No branches available for this district.</p>
-}*@
+}
 
 <div>
     <a href="/District/List" class="goback">Go back to list</a>
