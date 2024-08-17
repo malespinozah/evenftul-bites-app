@@ -28,7 +28,7 @@ namespace Eventful_Bite_App.Controllers
             //Comunicate with the journal data API to retrive the list of journal entries
             //curl https://localhost:44301/api/journaldata/ListJournalEntries
 
-            string url = "journaldata/ListJournalEntries";
+            string url = "https://localhost:44301/api/journaldata/ListJournalEntries";
             HttpResponseMessage response = client.GetAsync(url).Result;
 
             //Debug.WriteLine("The response code is");
@@ -48,18 +48,18 @@ namespace Eventful_Bite_App.Controllers
             //Comunicate with the Journal data API to retrive one journal entry
             //curl https://localhost:44301/api/journaldata/FindJournalEntry/{id}
 
-            string url = "journaldata/FindJournalEntry/" + id;
+            string url = "https://localhost:44301/api/journaldata/FindJournalEntry/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
 
             //Debug.WriteLine("The response code is");
             //Debug.WriteLine(response.StatusCode);
 
-            JournalDto selectedJournalEntry = response.Content.ReadAsAsync<JournalDto>().Result;
+            JournalDto journalDto = response.Content.ReadAsAsync<JournalDto>().Result;
 
             //Debug.WriteLine("Entry received:");
-            //Debug.WriteLine(selectedJournalEntry.JournalEntryTitle);
+            //Debug.WriteLine(selectedJournalEntry.JournalTitle);
 
-            return View(selectedJournalEntry);
+            return View(journalDto);
         }
 
 

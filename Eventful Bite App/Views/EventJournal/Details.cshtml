@@ -46,14 +46,34 @@
             <textarea name="JournalDescription" placeholder="Description" class="form-text"></textarea>
         </div>
 
+<<<<<<< HEAD
         <button type="submit" class="btn btn-primary">Add Journal Entry</button>
         <a href="/EventJournal/District" class="btn btn-outline-secondary">Go back to list</a>
     </form>
+=======
+    <div class="experience">
+        <h3>4. Record your experience</h3>
+        <input type="text" name="JournalTitle" placeholder="Title" />
+        <textarea class="input-box" name="JournalDescription" placeholder="Description"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Journal Entry</button>
+</form>
+
+<div>
+    <a href="/EventJournal/District" class="goback">Go back to list</a>
+>>>>>>> 15402d41423855cfb8d5b4f4126ead27bed6edec
 </div>
 
 <style>
     .experience {
         display:flex;
         flex-direction:column;
+    }
+
+    .input-box {
+        width: 400px;
+        height: 50px;
+        padding-top: 10px;
     }
 </style>
