@@ -1,54 +1,59 @@
-﻿﻿﻿@model Eventful_Bite_App.Models.BranchDetails
+﻿﻿﻿﻿@model Eventful_Bite_App.Models.BranchDetails
 
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2><a href="/Restaurant/Details/@Model.Branch.RestaurantId">@Model.Branch.RestaurantName</a> (@Model.Branch.Location)</h2>
+<div class="wrap-list">
+    <div class="list-column">
 
-<h5 style="margin-top:2rem; text-decoration:underline">Branch Details</h5>
+        <h2><a href="/Restaurant/Details/@Model.Branch.RestaurantId">@Model.Branch.RestaurantName</a> (@Model.Branch.Location)</h2>
 
-
-<div>
-    <div style="display:none">Branch ID: @Model.Branch.BranchId</div>
-    <div style="display:none">Restaurant ID: @Model.Branch.RestaurantId</div>
-    <div style="margin-top:1rem;"><strong>Location:</strong> @Model.Branch.Location</div>
-    <div><strong>Status:</strong> @Model.Branch.Status</div>
-    <div><strong>Review:</strong> @Model.Branch.Review</div>
-    <div><strong>Address:</strong> @Model.Branch.Address</div>
-
-</div>
+        <h5 style="margin-top:2rem; text-decoration:underline">Branch Details</h5>
 
 
+        <div>
+            <div style="display:none">Branch ID: @Model.Branch.BranchId</div>
+            <div style="display:none">Restaurant ID: @Model.Branch.RestaurantId</div>
+            <div style="margin-top:1rem;"><strong>Location:</strong> @Model.Branch.Location</div>
+            <div><strong>Status:</strong> @Model.Branch.Status</div>
+            <div><strong>Review:</strong> @Model.Branch.Review</div>
+            <div><strong>Address:</strong> @Model.Branch.Address</div>
 
-<div style="margin-top: 1.5rem;">
-    <a href="/Branch/Edit/@Model.Branch.BranchId" class="btn btn-primary" role="button">Update</a>
-    <a href="/Branch/DeleteConfirm/@Model.Branch.BranchId" class="btn btn-danger" role="button">Delete</a>
-    <a href="/Branch/List" class="btn btn-outline-secondary" role="button">Back to Branch List</a>
-</div>
+        </div>
 
-<hr />
-<div>
-    <h3>Nearby Events in @Model.Branch.Location</h3>
-    @if (Model.Events != null && Model.Events.Any())
-    {
-        <ol>
-            @foreach (var evt in Model.Events)
+
+
+        <div style="margin-top: 1.5rem;">
+            <a href="/Branch/Edit/@Model.Branch.BranchId" class="btn btn-primary" role="button">Update</a>
+            <a href="/Branch/DeleteConfirm/@Model.Branch.BranchId" class="btn btn-danger" role="button">Delete</a>
+            <a href="/Branch/List" class="btn btn-outline-secondary" role="button">Back to Branch List</a>
+        </div>
+    </div>
+    <div class="list-column">
+        <div>
+            <h3>Nearby Events in @Model.Branch.Location</h3>
+            @if (Model.Events != null && Model.Events.Any())
             {
-                <li>
-                    <a href="/Event/Details/@evt.EventId">@evt.EventName</a>
-                </li>
+                <ol>
+                    @foreach (var evt in Model.Events)
+                    {
+                        <li>
+                            <a href="/Event/Details/@evt.EventId">@evt.EventName</a>
+                        </li>
+                    }
+                </ol>
             }
-        </ol>
-    }
-    else
-    {
-        <p>No upcoming events.</p>
-    }
-</div>
-<div>
-    <a href="/District/Details/@Model.Events.First().DistrictId" class="btn btn-outline-secondary">
-        Back to District Details
-    </a>
+            else
+            {
+                <p>No upcoming events.</p>
+            }
+        </div>
+        <div>
+            <a href="/District/Details/@Model.Events.First().DistrictId" class="btn btn-outline-secondary">
+                Back to District Details
+            </a>
+        </div>
+    </div>
 </div>

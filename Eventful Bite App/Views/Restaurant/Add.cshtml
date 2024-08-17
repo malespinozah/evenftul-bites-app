@@ -1,29 +1,32 @@
-﻿﻿
+﻿﻿﻿
 @{
     ViewBag.Title = "Create";
 }
 
-<h2 style="margin-top: 2rem;">Add Restaurant</h2>
+<div class="wrap-width">
 
-<form style="margin-top:1.5rem" method="POST" action="/Restaurant/Create">
-    <div class="form-group">
-        <label for="name">Restaurant Name:</label>
-        <input type="text" name="RestaurantName" class="form-control" id="name" required>
+    <h2 style="margin-top: 2rem;">Add Restaurant</h2>
 
-    </div>
-    <div class="form-group">
-        <label for="type">Restaurant Type:</label>
-        <input type="text" name="RestaurantType" class="form-control" id="type" required>
-    </div>
-    <div class="form-group">
-        <label for="cuisine">Cuisine:</label>
-        <input type="text" name="cuisine" class="form-control" id="cuisine" required>
-    </div>
-    <div style="margin-bottom:2rem;" class="form-group">
-        <label for="budget">Budget ($):</label>
-        <input type="text" name="budget" class="form-control" id="budget" required>
-    </div>
+    <form style="margin-top:1.5rem" method="POST" action="/Restaurant/Create">
+        <div class="form-group">
+            <label for="name">Restaurant Name:</label>
+            <input type="text" name="RestaurantName" class="form-control" id="name" required>
 
-    <button style="width:10rem" type="submit" class="btn btn-primary">Add Restaurant</button>
-    <a style="margin-left: 0.2rem;" href="/Restaurant/List" class="btn btn-outline-secondary" role="button">Cancel</a>
-</form>
+        </div>
+        <div class="form-group">
+            <label for="type">Restaurant Type:</label>
+            <input type="text" name="RestaurantType" class="form-control" id="type" required>
+        </div>
+        <div class="form-group">
+            <label for="cuisine">Cuisine:</label>
+            <input type="text" name="cuisine" class="form-control" id="cuisine" required>
+        </div>
+        <div style="margin-bottom:2rem;" class="form-group">
+            <label for="budget">Budget ($):</label>
+            <input type="text" name="budget" class="form-control" id="budget" required>
+        </div>
+
+        <button style="width:10rem" type="submit" class="btn btn-primary">Add Restaurant</button>
+        <a style="margin-left: 0.2rem;" href="/Restaurant/List" class="btn btn-outline-secondary" role="button">Cancel</a>
+    </form>
+</div>
