@@ -1,38 +1,42 @@
-﻿﻿@model Eventful_Bite_App.Models.RestaurantDto
+﻿﻿﻿@model Eventful_Bite_App.Models.RestaurantDto
 
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2 style="margin-top: 2rem;">@Model.RestaurantName</h2>
+<div class="wrap-list">
+    <div class="list-column">
 
-<h5 style="margin-top:2rem; text-decoration:underline">Restaurant Details</h5>
+        <h5 style="margin-top:2rem; text-decoration:underline">Restaurant Details</h5>
 
-<div>
-    <div style="margin-top:1rem;"><strong>Restaurant Type:</strong> @Model.RestaurantType</div>
-    <div><strong>Cuisine:</strong> @Model.Cuisine</div>
-    <div><strong>Budget:</strong> $@Model.Budget</div>
-</div>
+        <div>
+            <div style="margin-top:1rem;"><strong>Restaurant Type:</strong> @Model.RestaurantType</div>
+            <div><strong>Cuisine:</strong> @Model.Cuisine</div>
+            <div><strong>Budget:</strong> $@Model.Budget</div>
+        </div>
 
-<div style="margin-top: 1.5rem;">
-    <a href="/Restaurant/Edit/@Model.RestaurantId" class="btn btn-primary" role="button">Update</a>
-    <a href="/Restaurant/DeleteConfirm/@Model.RestaurantId" class="btn btn-danger" role="button">Delete</a>
-    <a href="/Restaurant/List" class="btn btn-outline-secondary" role="button">Back to Restaurant List</a>
-</div>
+        <div style="margin-top: 1.5rem;">
+            <a href="/Restaurant/Edit/@Model.RestaurantId" class="btn btn-primary" role="button">Update</a>
+            <a href="/Restaurant/DeleteConfirm/@Model.RestaurantId" class="btn btn-danger" role="button">Delete</a>
+            <a href="/Restaurant/List" class="btn btn-outline-secondary" role="button">Back to Restaurant List</a>
+        </div>
+    </div>
+    <div class="list-column">
+        <h2 style="margin-top: 2rem;">@Model.RestaurantName</h2>
 
-<hr>
+        <h5 style="margin-top:1.5rem; text-decoration:underline">Branches</h5>
 
-<h5 style="margin-top:1.5rem; text-decoration:underline">Branches</h5>
+        <div style="display: flex;">
+            <form method="POST" action="/Branch/Add/@Model.RestaurantId" id="branchForm">
+                <input type="hidden" name="RestaurantId" value="@Model.RestaurantId" />
+                <button type="submit" class="btn btn-primary">Add Branch</button>
+            </form>
 
-<div style="display: flex;">
-    <form method="POST" action="/Branch/Add/@Model.RestaurantId" id="branchForm">
-        <input type="hidden" name="RestaurantId" value="@Model.RestaurantId" />
-        <button type="submit" class="btn btn-primary">Add Branch</button>
-    </form>
-
-    <form style="margin-left:0.5rem" method="POST" action="/Branch/ListByRestaurant/@Model.RestaurantId" id="listbranchForm">
-        <input type="hidden" name="RestaurantId" value="@Model.RestaurantId" />
-        <button type="submit" class="btn btn-outline-secondary">View @Model.RestaurantName Branches</button>
-    </form>
+            <form style="margin-left:0.5rem" method="POST" action="/Branch/ListByRestaurant/@Model.RestaurantId" id="listbranchForm">
+                <input type="hidden" name="RestaurantId" value="@Model.RestaurantId" />
+                <button type="submit" class="btn btn-outline-secondary">View @Model.RestaurantName Branches</button>
+            </form>
+        </div>
+    </div>
 </div>

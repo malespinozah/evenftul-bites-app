@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\roxie\\Documents\\Humber works\\eventful-bites-app\\",
+  "WorkspaceRootPath": "C:\\Users\\male_\\Desktop\\backup\\eventful-bites-app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\roxie\\documents\\humber works\\eventful-bites-app\\eventful bite app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\male_\\desktop\\backup\\eventful-bites-app\\eventful bite app\\content\\style\\styleapp.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\content\\style\\styleapp.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|C:\\Users\\male_\\Desktop\\backup\\eventful-bites-app\\eventful bite app\\views\\branch\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\views\\branch\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 209,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,15 +26,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\roxie\\Documents\\Humber works\\eventful-bites-app\\Eventful Bite App\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Eventful Bite App\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\roxie\\Documents\\Humber works\\eventful-bites-app\\Eventful Bite App\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Eventful Bite App\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\male_\\Desktop\\backup\\eventful-bites-app\\Eventful Bite App\\Views\\Branch\\List.cshtml",
+              "RelativeDocumentMoniker": "Eventful Bite App\\Views\\Branch\\List.cshtml",
+              "ToolTip": "C:\\Users\\male_\\Desktop\\backup\\eventful-bites-app\\Eventful Bite App\\Views\\Branch\\List.cshtml",
+              "RelativeToolTip": "Eventful Bite App\\Views\\Branch\\List.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAADwvxkAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T22:43:52.811Z",
+              "WhenOpened": "2024-08-17T05:23:04.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "styleApp.css",
+              "DocumentMoniker": "C:\\Users\\male_\\Desktop\\backup\\eventful-bites-app\\Eventful Bite App\\Content\\Style\\styleApp.css",
+              "RelativeDocumentMoniker": "Eventful Bite App\\Content\\Style\\styleApp.css",
+              "ToolTip": "C:\\Users\\male_\\Desktop\\backup\\eventful-bites-app\\Eventful Bite App\\Content\\Style\\styleApp.css",
+              "RelativeToolTip": "Eventful Bite App\\Content\\Style\\styleApp.css",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAAAFEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-17T05:21:53.222Z",
               "EditorCaption": ""
             }
           ]

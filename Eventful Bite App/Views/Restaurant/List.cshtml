@@ -1,49 +1,48 @@
-﻿﻿﻿@model IEnumerable<Eventful_Bite_App.Models.RestaurantDto>
+﻿﻿﻿﻿@model IEnumerable<Eventful_Bite_App.Models.RestaurantDto>
 @{
     ViewBag.Title = "List";
 }
 
-<div class="rest-list-header">
-    <h2>List of Restaurants</h2>
-</div>
-
-<button style="margin-top:1rem; margin-bottom:0.7rem" type="button" class="btn btn-primary"><a href="/Restaurant/Add" class="restaurant-add" style="color:white; text-decoration:none">Add Restaurant</a></button>
-<button style="margin-top:1rem; margin-bottom:0.7rem" type="button" class="btn btn-secondary"><a href="/Branch/List"  style="color:white; text-decoration:none">View All Restaurant Branches</a></button>
-
-
-
-<form class="form-inline search-bar" method="GET" action="/Restaurant/List">
-    <div class="input-group">
-        <input class="form-control" type="search" placeholder="Search Restaurant Name" aria-label="Search" name="SearchKey">
-        <div class="input-group-append" style="margin-left: 0.5rem">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </div>
+<div class="wrap-width">
+    <div class="rest-list-header">
+        <h2>List of Restaurants</h2>
     </div>
-</form>
 
+    <div class="wrap-buttons">
+        <button style="margin-top:1rem; margin-bottom:0.7rem" type="button" class="btn btn-primary"><a href="/Restaurant/Add" class="restaurant-add" style="color:white; text-decoration:none">Add Restaurant</a></button>
+        <button style="margin-top:1rem; margin-bottom:0.7rem" type="button" class="btn btn-secondary"><a href="/Branch/List" style="color:white; text-decoration:none">View All Restaurant Branches</a></button>
+    </div>
 
-<table class="table  table-striped">
-    <thead>
-        <tr>
-            <th scope="col">Restaurant Name</th>
-            <th scope="col">Restaurant Type</th>
-            <th scope="col">Cuisine</th>
-            <th scope="col">Budget</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var restaurant in Model)
-        {
+    <div>
+        <form class="form-inline search-bar" method="GET" action="/Restaurant/List">
+            <div class="input-group">
+                <input class="form-control" type="search" placeholder="Search Restaurant Name" aria-label="Search" name="SearchKey">
+                <div class="input-group-append" style="margin-left: 0.5rem">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <table class="table  table-striped">
+        <thead>
             <tr>
-                <th scope="row"><a href="/Restaurant/Details/@restaurant.RestaurantId">@restaurant.RestaurantName</a></th>
-                <td>@restaurant.RestaurantType</td>
-                <td>@restaurant.Cuisine</td>
-                <td>$@restaurant.Budget</td>
+                <th scope="col">Restaurant Name</th>
+                <th scope="col">Restaurant Type</th>
+                <th scope="col">Cuisine</th>
+                <th scope="col">Budget</th>
             </tr>
-        }
-    </tbody>
-</table>
-
-
-
-<link rel="stylesheet" href="~/Content/Site.css" />
+        </thead>
+        <tbody>
+            @foreach (var restaurant in Model)
+            {
+                <tr>
+                    <th scope="row"><a href="/Restaurant/Details/@restaurant.RestaurantId">@restaurant.RestaurantName</a></th>
+                    <td>@restaurant.RestaurantType</td>
+                    <td>@restaurant.Cuisine</td>
+                    <td>$@restaurant.Budget</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

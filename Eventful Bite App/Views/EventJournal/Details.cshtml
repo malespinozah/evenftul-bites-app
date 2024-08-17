@@ -1,68 +1,59 @@
-﻿@model Eventful_Bite_App.Models.DetailsDistrict
+﻿﻿@model Eventful_Bite_App.Models.DetailsDistrict
 @{
     ViewBag.Title = "Details";
 }
 
-<form action="/Journal/Create" method="post">
-    <h2>Restaurant and Events in @Model.SelectedDistrict.DistrictName District</h2>
+<div class="wrap-width">
+    <h1>Restaurant and Events in @Model.SelectedDistrict.DistrictName District</h1>
+    <form action="/Journal/Create" method="post">
+        <div class="event" style="margin-bottom:2rem;">
+            <h6>2. Select Event</h6>
+            @if (Model.KeptEvents != null && Model.KeptEvents.Any())
+            {
+                <select name="EventName" class="form-select">
+                    @foreach (var Event in Model.KeptEvents)
+                    {
+                        <option value="@Event.EventName">@Event.EventName</option>
+                    }
+                </select>
+            }
+            else
+            {
+                <p>No events available for this district.</p>
+            }
+        </div>
 
-    <div class="event">
-        <h3>2. Select Event</h3>
-        @if (Model.KeptEvents != null && Model.KeptEvents.Any())
-        {
-            <select name="EventName">
-                @foreach (var Event in Model.KeptEvents)
-                {
-                    <option value="@Event.EventName">@Event.EventName</option>
-                }
-            </select>
-        }
-        else
-        {
-            <p>No events available for this district.</p>
-        }
+        <div class="restaurant" style="margin-bottom:2rem;">
+            <h6>3. Select Restaurant</h6>
+            @if (Model.Branches != null && Model.Branches.Any())
+            {
+                <select name="RestaurantName" class="form-select">
+                    @foreach (var branch in Model.Branches)
+                    {
+                        <option value="@branch.RestaurantName">@branch.RestaurantName</option>
+                    }
+                </select>
+            }
+            else
+            {
+                <p>No restaurants available for this district.</p>
+            }
+        </div>
+
+        <div class="experience" style="margin-bottom:2rem;">
+            <h6>4. Record your experience</h6>
+            <input type="text" name="JournalTitle" placeholder="Title" class="form-control" />
+            <textarea name="JournalDescription" placeholder="Description" class="form-text"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Journal Entry</button>
+        <a href="/EventJournal/District" class="btn btn-outline-secondary">Go back to list</a>
+    </form>
+    
     </div>
 
-    <div class="restaurant">
-        <h3>3. Select Restaurant</h3>
-        @if (Model.Branches != null && Model.Branches.Any())
-        {
-            <select name="RestaurantName">
-                @foreach (var branch in Model.Branches)
-                {
-                    <option value="@branch.RestaurantName">@branch.RestaurantName</option>
-                }
-            </select>
+    <style>
+        .experience {
+            display: flex;
+            flex-direction: column;
         }
-        else
-        {
-            <p>No restaurants available for this district.</p>
-        }
-    </div>
-
-    <div class="experience">
-        <h3>4. Record your experience</h3>
-        <input type="text" name="JournalTitle" placeholder="Title" />
-        <textarea class="input-box" name="JournalDescription" placeholder="Description"></textarea>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Add Journal Entry</button>
-</form>
-
-<div>
-    <a href="/EventJournal/District" class="goback">Go back to list</a>
-</div>
-
-
-<style>
-    .experience {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .input-box {
-        width: 400px;
-        height: 50px;
-        padding-top: 10px;
-    }
-</style>
+    </style>

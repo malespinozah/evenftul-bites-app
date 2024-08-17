@@ -2,44 +2,47 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Adding New Event</h2>
+<div class="wrap-width">
+    <h2 style="margin-top: 2rem;">Adding New Event</h2>
 
-<form action="/Event/Add" method="post">
-    <div>
-        <label for="EventName">Event Name:</label>
-        <input type="text" name="EventName" id="EventName" />
-    </div>
-    <div>
-        <label for="EventDescription">Event Description:</label>
-        <input type="text" name="EventDescription" id="EventDescription" />
-    </div>
-    <div>
-        <label for="EventDate">Event Date:</label>
-        <input type="datetime-local" name="EventDate" id="EventDate" />
-    </div>
-    <div>
-        <label for="EventPrice">Event Price:</label>
-        <input type="number" name="EventPrice" id="EventPrice" step="0.1" />
-    </div>
-    <div>
-        <label for="EventAddress">Event Address: </label>
-        <input type="text" name="EventAddress" id="EventAddress" />
-    </div>
-    <div>
-        <label for="DistrictId">District Id: </label>
-        <select id="DistrictId" name="DistrictId">
-            <option value=""></option>
-            <option value="1">Markham</option>
-            <option value="2">North York</option>
-            <option value="3">Scarborough</option>
-            <option value="4">Mississauga</option>
-            <option value="5">Brampton</option>
-            <option value="6">Vaughan</option>
-            <option value="7">Richmond Hill</option>
-            <option value="8">Toronto</option>
-        </select>
-    </div>
-    <div>
-        <input type="submit" value="Add Event" />
-    </div>
-</form>
+    <form action="/Event/Add" method="post">
+        <div class="form-group">
+            <label for="EventName">Event Name:</label>
+            <input type="text" name="EventName" id="EventName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="EventDescription">Event Description:</label>
+            <input type="text" name="EventDescription" id="EventDescription" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="EventDate">Event Date:</label>
+            <input type="datetime-local" name="EventDate" id="EventDate" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="EventPrice">Event Price:</label>
+            <input type="number" name="EventPrice" id="EventPrice" step="0.1" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="EventAddress">Event Address: </label>
+            <input type="text" name="EventAddress" id="EventAddress" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="DistrictId">District Id: </label>
+            <select id="DistrictId" name="DistrictId" class="form-select">
+                <option value=""></option>
+                <option value="1">Markham</option>
+                <option value="2">North York</option>
+                <option value="3">Scarborough</option>
+                <option value="4">Mississauga</option>
+                <option value="5">Brampton</option>
+                <option value="6">Vaughan</option>
+                <option value="7">Richmond Hill</option>
+                <option value="8">Toronto</option>
+            </select>
+        </div>
+        <div style="margin-top:2rem;">
+            <input type="submit" value="Add Event" class="btn btn-primary" />
+            <a style="margin-left: 0.2rem;" href="/District/List" class="btn btn-outline-secondary" role="button">Cancel</a>
+        </div>
+    </form>
+</div>

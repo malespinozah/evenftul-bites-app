@@ -1,16 +1,21 @@
-﻿@model IEnumerable<Eventful_Bite_App.Models.DistrictDto>
+﻿﻿@model IEnumerable<Eventful_Bite_App.Models.DistrictDto>
 @{
     ViewBag.Title = "List";
 }
-
-<h2>Eventful Bite Journal</h2>
-<br>
-<h3>1. Select District</h3>
-<div class="districts">
-    @foreach (var District in Model)
-    {
-        <div>
-            <a href="Details/@District.DistrictId"> @District.DistrictName</a>
+<h1 style="text-align:center; margin-bottom:20px">Eventful Bite Journal</h1>
+<div class="wrap-list">
+    <div class="list-image">
+        <img src="~/Content/Images/toronto.png" alt="List" />
+    </div>
+    <div class="list-display">
+        <h6>1. Select District</h6>
+        <div class="districts">
+            @foreach (var District in Model)
+            {
+                <div>
+                    <a href="Details/@District.DistrictId"> @District.DistrictName</a>
+                </div>
+            }
         </div>
-    }
+    </div>
 </div>

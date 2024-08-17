@@ -1,15 +1,15 @@
-﻿@model Eventful_Bite_App.Models.EventDto
+﻿﻿@model Eventful_Bite_App.Models.EventDto
 @{
     ViewBag.Title = "DeleteConfirm";
 }
 
-<h2>ConfirmDelete</h2>
+<div class="wrap-width">
+    <h2>Delete <i>@Model.EventName</i> in @Model.DistrictName</h2>
+    <p>Are you sure you want to delete this event?</p>
 
-<h2>Are you sure you want to delete this event?</h2>
-<p>@Model.EventName in @Model.DistrictName</p>
 
-<a href="/Event/List">Cancel</a>
-
-<form action="/Event/Delete/@Model.EventId" method="post">
-    <input type="submit" value="Confirm Delete" />
-</form>
+    <form style="margin-top:2rem;" action="/Event/Delete/@Model.EventId" method="post">
+        <input type="submit" value="Confirm Delete" class="btn btn-danger" />
+        <a href="/Event/List" class="btn btn-outline-secondary">Cancel</a>
+    </form>
+</div>

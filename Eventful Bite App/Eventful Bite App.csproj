@@ -242,6 +242,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Images\background.jpg" />
+    <Content Include="Content\Images\events.jpg" />
+    <Content Include="Content\Images\journal.png" />
+    <Content Include="Content\Images\listevents.png" />
+    <Content Include="Content\Images\listentries.jpg" />
+    <Content Include="Content\Images\restaurants.jpg" />
+    <Content Include="Content\Images\toronto.png" />
+    <Content Include="Content\Style\styleApp.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
