@@ -23,5 +23,5 @@ the events section.
 
 **Rose**
 - Journals CRUD
-- Integration between Events, Restaurants and Journal Entry *(In Progress)*
+- Integration between Events, Restaurants and Journal Entry
 - README
