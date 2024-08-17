@@ -1,61 +1,23 @@
-﻿@model Eventful_Bite_App.Models.DetailsDistrict
+﻿@model Eventful_Bite_App.Models.JournalDto
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Edit";
 }
 
-<!--Requires adjustment to make sure this works as well with Create/Add-->
-
-<form action="/" method="post">
-
-    <h2>Restaurant and Events in @Model.SelectedDistrict.DistrictName District</h2>
-
-    <div class="event">
-        <h3>2. Select Event</h3>
-        @if (Model.KeptEvents != null && Model.KeptEvents.Any())
-        {
-            <select>
-                @foreach (var Event in Model.KeptEvents)
-                {
-                    <option value="@Event.EventId">@Event.EventName</option>
-                }
-            </select>
-        }
-        else
-        {
-            <p>No events available for this district.</p>
-        }
+<form action="/Journal/Update/@Model.JournalId" method="post">
+    <div style="display:none;">
+        @* Pass through the Event ID *@
+        <input type="text" name="JournalId" value="@Model.JournalId" class="form-control" />
     </div>
-
-
-
-    <div class="restaurant">
-        <h3>3. Select Restaurant</h3>
-        @if (Model.Branches != null && Model.Branches.Any())
-        {
-            <select>
-                @foreach (var branch in Model.Branches)
-                {
-                    <option value="@branch.BranchId">@branch.RestaurantName</option>
-                }
-            </select>
-        }
-        else
-        {
-            <p>No restaurants available for this district.</p>
-        }
+    <div class="form-group">
+        <label>Journal Title:</label>
+        <input type="text" name="JournalTitle" value="@Model.JournalTitle" class="form-control" />
     </div>
-
-    <div class="experience">
-        <h3>4. Record your experience</h3>
-        <textarea></textarea>
+    <div class="form-group">
+        <label>Journal Description:</label>
+        <textarea name="JournalDescription" placeholder="@Model.JournalDescription" class="form-text"></textarea>
     </div>
-
-
-
-    <button type="submit" class="btn btn-primary">Add Journal Entry</button>
-
+    <div style="margin-top:2rem;">
+        <input type="submit" value="Update Entry" class="btn btn-primary" />
+        <a style="margin-left: 0.2rem;" href="/Journal/Details/@Model.JournalId" class="btn btn-outline-secondary" role="button">Cancel</a>
+    </div>
 </form>
-
-<div>
-    <a href="/EventJournal/District" class="goback">Go back to list</a>
-</div>

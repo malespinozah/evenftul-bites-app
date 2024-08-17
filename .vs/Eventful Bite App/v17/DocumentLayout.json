@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\male_\\Desktop\\aksdasd\\evenftul-bites-app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\male_\\desktop\\aksdasd\\evenftul-bites-app\\eventful bite app\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\male_\\desktop\\aksdasd\\evenftul-bites-app\\eventful bite app\\views\\journal\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\views\\journal\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\male_\\desktop\\aksdasd\\evenftul-bites-app\\eventful bite app\\views\\district\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\views\\district\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|c:\\users\\male_\\desktop\\aksdasd\\evenftul-bites-app\\eventful bite app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 238,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,16 +34,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EventController.cs",
-              "DocumentMoniker": "C:\\Users\\male_\\Desktop\\aksdasd\\evenftul-bites-app\\Eventful Bite App\\Controllers\\EventController.cs",
-              "RelativeDocumentMoniker": "Eventful Bite App\\Controllers\\EventController.cs",
-              "ToolTip": "C:\\Users\\male_\\Desktop\\aksdasd\\evenftul-bites-app\\Eventful Bite App\\Controllers\\EventController.cs",
-              "RelativeToolTip": "Eventful Bite App\\Controllers\\EventController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAjwBgAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T07:40:10.18Z",
+              "DocumentIndex": 1,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\male_\\Desktop\\aksdasd\\evenftul-bites-app\\Eventful Bite App\\Views\\District\\List.cshtml",
+              "RelativeDocumentMoniker": "Eventful Bite App\\Views\\District\\List.cshtml",
+              "ToolTip": "C:\\Users\\male_\\Desktop\\aksdasd\\evenftul-bites-app\\Eventful Bite App\\Views\\District\\List.cshtml",
+              "RelativeToolTip": "Eventful Bite App\\Views\\District\\List.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T19:49:53.827Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\male_\\Desktop\\aksdasd\\evenftul-bites-app\\Eventful Bite App\\Views\\Journal\\List.cshtml",
+              "RelativeDocumentMoniker": "Eventful Bite App\\Views\\Journal\\List.cshtml",
+              "ToolTip": "C:\\Users\\male_\\Desktop\\aksdasd\\evenftul-bites-app\\Eventful Bite App\\Views\\Journal\\List.cshtml",
+              "RelativeToolTip": "Eventful Bite App\\Views\\Journal\\List.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvw0AAADWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T19:48:49.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\male_\\Desktop\\aksdasd\\evenftul-bites-app\\Eventful Bite App\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Eventful Bite App\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\male_\\Desktop\\aksdasd\\evenftul-bites-app\\Eventful Bite App\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Eventful Bite App\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T19:45:38.698Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 238,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }

@@ -48,7 +48,7 @@ namespace Eventful_Bite_App.Controllers
             //Comunicate with the Journal data API to retrive one journal entry
             //curl https://localhost:44301/api/journaldata/FindJournalEntry/{id}
 
-            string url = "journaldata/FindJournalEntry/" + id;
+            string url = "https://localhost:44301/api/journaldata/FindJournalEntry/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
 
             //Debug.WriteLine("The response code is");
@@ -152,7 +152,7 @@ namespace Eventful_Bite_App.Controllers
             //Comunicate with the Journal data API to retrive one journal entry
             //curl https://localhost:44301/api/journaldata/FindJournalEntry/{id}
 
-            string url = "journaldata/FindJournalEntry/" + id;
+            string url = "https://localhost:44301/api/journaldata/FindJournalEntry/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
 
             //Debug.WriteLine("The response code is");
@@ -167,28 +167,14 @@ namespace Eventful_Bite_App.Controllers
         [HttpPost]
         public ActionResult Update(int id, Journal Journal)
         {
-            //After retriving the journal entry data, updates the entry data in the system using the API
-            //curl -d @game.json -H "Content-Type:application/json" "https://localhost:44301/api/journaldata/UpdateJournal/3
-
-            string url = "journaldata/UpdateJournal/" + id;
-
+            string url = "https://localhost:44301/api/journaldata/UpdateJournalEntry/" + id;
             string jsonpayload = jss.Serialize(Journal);
-
             HttpContent content = new StringContent(jsonpayload);
-
             content.Headers.ContentType.MediaType = "application/json";
 
             HttpResponseMessage response = client.PostAsync(url, content).Result;
-            //Debug.WriteLine(content);
 
-            if (response.IsSuccessStatusCode)
-            {
-                return RedirectToAction("Details/" + id);
-            }
-            else
-            {
-                return RedirectToAction("Error");
-            }
+            return RedirectToAction("List");
         }
 
         // GET: Journal/Delete/3

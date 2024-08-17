@@ -6,14 +6,15 @@
 
 <h2>@Model.JournalTitle</h2>
 
-
-<div><a href="/Journal/DeleteConfirm/@Model.JournalId">Delete Entry</a></div>
-<a href="/Journal/List">Return to Journal List</a>
-
 <div>
-    <div><a href="/Journal/Edit/@Model.JournalId">Edit Journal Entry</a></div>
     <div>Description:</div>
     <div>@Model.JournalDescription</div>
     <div>Date: @Model.EntryDate</div>
+</div>
+
+<div class="btnControls">
+    <a href="/Journal/Edit/@Model.JournalId" class="btn btn-primary">Update</a>
+    <a href="/Journal/DeleteConfirm/@Model.JournalId" class="btn btn-danger">Delete</a>
+    <a href="/Journal/List" class="btn btn-outline-secondary">Go back to list</a>
 </div>
 

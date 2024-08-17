@@ -57,6 +57,7 @@ namespace Eventful_Bite_App.Controllers
         /// </example>
         [ResponseType(typeof(Journal))]
         [HttpGet]
+        [Route("api/JournalData/FindJournalEntry/{id}")]
         public IHttpActionResult FindJournalEntry(int id)
         {
             Journal Journal = db.Journals.Find(id);
@@ -138,7 +139,6 @@ namespace Eventful_Bite_App.Controllers
         [Route("api/JournalData/UpdateJournalEntry/{id}")]
         public IHttpActionResult UpdateJournalEntry(int id, Journal Journal)
         {
-            Debug.WriteLine("I have reached the journal update method");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -146,8 +146,6 @@ namespace Eventful_Bite_App.Controllers
 
             if (id != Journal.JournalId)
             {
-                Debug.WriteLine("Incorrect ID");
-                Debug.WriteLine("GET parameter" + id);
                 return BadRequest();
             }
 
@@ -168,7 +166,6 @@ namespace Eventful_Bite_App.Controllers
                     throw;
                 }
             }
-            Debug.WriteLine("No condition triggered");
             return StatusCode(HttpStatusCode.NoContent);
         }
 
@@ -188,6 +185,7 @@ namespace Eventful_Bite_App.Controllers
 
         [ResponseType(typeof(Journal))]
         [HttpPost]
+        [Route("api/JournalData/DeleteJournalEntry/{id}")]
         public IHttpActionResult DeleteJournalEntry(int id)
         {
             Journal Journal = db.Journals.Find(id);
@@ -199,7 +197,7 @@ namespace Eventful_Bite_App.Controllers
             db.Journals.Remove(Journal);
             db.SaveChanges();
 
-            return Ok(Journal);
+            return Ok();
         }
 
         protected override void Dispose(bool disposing)
