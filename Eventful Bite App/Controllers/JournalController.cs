@@ -62,7 +62,6 @@ namespace Eventful_Bite_App.Controllers
             return View(selectedJournalEntry);
         }
 
-
         public ActionResult Error()
         {
             return View();
@@ -75,74 +74,38 @@ namespace Eventful_Bite_App.Controllers
         }
 
 
-        ////REVISE THIS ONCE CODED IS COMPLETED TO SEE IF IT WILL ADD THE DATA
+        //REVISE THIS ONCE CODED IS COMPLETED TO SEE IF IT WILL ADD THE DATA
 
-        //// POST: Journal/Create
-        //[HttpPost]
-        //public ActionResult Create(Journal Journal, int id)
-        //{
-        //    //Debug.WriteLine("The journal entry added is:");
-        //    //Debug.WriteLine(journal.JournalEntryTitle);
-
-        //    //Add a new journal entry into the system using the API
-        //    //curl -d @journalentry.json -H "Content-Type:application/json" https://localhost:44301/api/EventJournal/Details/{id}
-
-        //    string url = "EventJournal/Details/" + id;
-
-        //    string jsonpayload = jss.Serialize(Journal);
-
-        //    Debug.WriteLine(jsonpayload);
-
-        //    HttpContent content = new StringContent(jsonpayload);
-        //    content.Headers.ContentType.MediaType = "application/json";
-
-        //    HttpResponseMessage response = client.PostAsync(url, content).Result;
-
-        //    if (response.IsSuccessStatusCode)
-        //    {
-        //        return RedirectToAction("List");
-        //    }
-        //    else
-        //    {
-        //        return RedirectToAction("Error");
-        //    }
-        //}
+        // POST: Journal/Create
         [HttpPost]
-        public ActionResult Create(string EventName, string RestaurantName, string JournalTitle, string JournalDescription)
+        public ActionResult Create(Journal Journal, int id)
         {
-            var journal = new Journal
-            {
-                EventName = EventName,
-                RestaurantName = RestaurantName,
-                JournalTitle = JournalTitle,
-                JournalDescription = JournalDescription,
-                EntryDate = DateTime.Now
-            };
+            //Debug.WriteLine("The journal entry added is:");
+            //Debug.WriteLine(journal.JournalEntryTitle);
 
-            string jsonPayload = jss.Serialize(journal);
-            HttpContent content = new StringContent(jsonPayload);
+            //Add a new journal entry into the system using the API
+            //curl -d @journalentry.json -H "Content-Type:application/json" https://localhost:44301/api/EventJournal/Details/{id}
+
+            string url = "EventJournal/Details/" + id;
+
+            string jsonpayload = jss.Serialize(Journal);
+
+            Debug.WriteLine(jsonpayload);
+
+            HttpContent content = new StringContent(jsonpayload);
             content.Headers.ContentType.MediaType = "application/json";
 
-            string url = "journalData/AddJournalEntry";
             HttpResponseMessage response = client.PostAsync(url, content).Result;
 
-            string responseContent = response.Content.ReadAsStringAsync().Result;
-            Debug.WriteLine("Response Content: " + responseContent);
-
-            return RedirectToAction("List");
-            //if (response.IsSuccessStatusCode)
-            //{
-            //    return RedirectToAction("List");
-            //}
-            //else
-            //{
-            //    // Check if the response indicates a specific error
-            //    TempData["ErrorMessage"] = responseContent;
-            //    return RedirectToAction("Error");
-            //}
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("List");
+            }
+            else
+            {
+                return RedirectToAction("Error");
+            }
         }
-
-
 
         // GET: Journal/Edit/3
         public ActionResult Edit(int id)
