@@ -7,7 +7,11 @@
     <h1>Restaurant and Events in @Model.SelectedDistrict.DistrictName District</h1>
     <form action="/Journal/Create" method="post">
         <div class="event" style="margin-bottom:2rem;">
+<<<<<<< HEAD
             <h6>2. Select Event</h6>
+=======
+            <h4>2. Select Event</h4>
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
             @if (Model.KeptEvents != null && Model.KeptEvents.Any())
             {
                 <select name="EventName" class="form-select">
@@ -24,7 +28,11 @@
         </div>
 
         <div class="restaurant" style="margin-bottom:2rem;">
+<<<<<<< HEAD
             <h6>3. Select Restaurant</h6>
+=======
+            <h4>3. Select Restaurant</h4>
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
             @if (Model.Branches != null && Model.Branches.Any())
             {
                 <select name="RestaurantName" class="form-select">
@@ -39,6 +47,7 @@
                 <p>No restaurants available for this district.</p>
             }
         </div>
+<<<<<<< HEAD
 
         <div class="experience" style="margin-bottom:2rem;">
             <h6>4. Record your experience</h6>
@@ -57,3 +66,43 @@
             flex-direction: column;
         }
     </style>
+=======
+
+        <div class="experience" style="margin-bottom:2rem;">
+            <h4>4. Record your experience</h4>
+            <input type="text" name="JournalTitle" placeholder="Title"  class="form-control"/>
+            <textarea name="JournalDescription" placeholder="Description" class="form-text"></textarea>
+        </div>
+
+<<<<<<< HEAD
+        <button type="submit" class="btn btn-primary">Add Journal Entry</button>
+        <a href="/EventJournal/District" class="btn btn-outline-secondary">Go back to list</a>
+    </form>
+=======
+    <div class="experience">
+        <h3>4. Record your experience</h3>
+        <input type="text" name="JournalTitle" placeholder="Title" />
+        <textarea class="input-box" name="JournalDescription" placeholder="Description"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Journal Entry</button>
+</form>
+
+<div>
+    <a href="/EventJournal/District" class="goback">Go back to list</a>
+>>>>>>> 15402d41423855cfb8d5b4f4126ead27bed6edec
+</div>
+
+<style>
+    .experience {
+        display:flex;
+        flex-direction:column;
+    }
+
+    .input-box {
+        width: 400px;
+        height: 50px;
+        padding-top: 10px;
+    }
+</style>
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5

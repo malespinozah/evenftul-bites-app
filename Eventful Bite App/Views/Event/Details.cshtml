@@ -45,12 +45,21 @@
     </div>
     <div class="list-column">
         @*<h3>Branches in the Same District</h3>
+<<<<<<< HEAD
             <ul>
                 @foreach (var branch in Model.Branches)
                 {
                     <li>@branch.BranchName - @branch.Address</li>
                 }
             </ul>*@
+=======
+        <ul>
+            @foreach (var branch in Model.Branches)
+            {
+                <li>@branch.BranchName - @branch.Address</li>
+            }
+        </ul>*@
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
 
         <h3>@Model.Event.DistrictName Restaurants Nearby</h3>
         <ul>

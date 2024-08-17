@@ -123,7 +123,7 @@ namespace Eventful_Bite_App.Controllers
         /// <param name="id">The ID of the Event to edit.</param>
         /// <returns>Returns the Edit view with the selected Event details.</returns>
         // GET: Event/Edit/2
-        //[Authorize]
+       [Authorize]
         public ActionResult Edit(int id)
         {
             string url = "https://localhost:44301/api/EventData/FindEvents/" + id;
@@ -156,7 +156,7 @@ namespace Eventful_Bite_App.Controllers
         /// <param name="id">The ID of the Event to delete.</param>
         /// <returns>Returns the DeleteConfirm view with the selected Event details.</returns>
         // GET: Event/Delete/1
-        //[Authorize]
+        [Authorize]
         public ActionResult DeleteConfirm(int id)
         {
             string url = "https://localhost:44301/api/EventData/FindEvents/" + id;

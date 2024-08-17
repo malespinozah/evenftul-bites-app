@@ -467,6 +467,9 @@ C:\Users\roxie\Documents\Humber works\evenftul-bites-app\Eventful Bite App\obj\D
 C:\Users\roxie\Documents\Humber works\evenftul-bites-app\Eventful Bite App\obj\Debug\Eventful Bite App.pdb
 C:\Users\roxie\Documents\Humber works\evenftul-bites-app\Eventful Bite App\obj\Debug\Eventful_Bite_App.Migrations.JournalsListing.resources
 C:\Users\cherr\Documents\Humber Courses\HTTP5226\evenftul-bites-app\Eventful Bite App\obj\Debug\Eventful_Bite_App.Migrations.JournalsListing.resources
+<<<<<<< HEAD
+C:\Users\male_\Desktop\evenftul-bites-app\Eventful Bite App\obj\Debug\Eventful_Bite_App.Migrations.JournalsListing.resources
+=======
 C:\Users\roxie\Documents\Humber works\eventful-bites-app\Eventful Bite App\bin\Eventful Bite App.dll.config
 C:\Users\roxie\Documents\Humber works\eventful-bites-app\Eventful Bite App\bin\Eventful Bite App.dll
 C:\Users\roxie\Documents\Humber works\eventful-bites-app\Eventful Bite App\bin\Eventful Bite App.pdb
@@ -585,6 +588,7 @@ C:\Users\roxie\Documents\Humber works\eventful-bites-app\Eventful Bite App\bin\r
 C:\Users\roxie\Documents\Humber works\eventful-bites-app\Eventful Bite App\bin\roslyn\vbc.rsp
 C:\Users\roxie\Documents\Humber works\eventful-bites-app\Eventful Bite App\bin\roslyn\VBCSCompiler.exe
 C:\Users\roxie\Documents\Humber works\eventful-bites-app\Eventful Bite App\bin\roslyn\VBCSCompiler.exe.config
+<<<<<<< HEAD
 C:\Users\male_\Desktop\eventful-bites-app\Eventful Bite App\bin\Eventful Bite App.dll.config
 C:\Users\male_\Desktop\eventful-bites-app\Eventful Bite App\bin\Eventful Bite App.dll
 C:\Users\male_\Desktop\eventful-bites-app\Eventful Bite App\bin\Eventful Bite App.pdb
@@ -821,3 +825,6 @@ C:\Users\male_\Desktop\backup\eventful-bites-app\Eventful Bite App\obj\Debug\Eve
 C:\Users\male_\Desktop\backup\eventful-bites-app\Eventful Bite App\obj\Debug\Eventful.722BBEDA.Up2Date
 C:\Users\male_\Desktop\backup\eventful-bites-app\Eventful Bite App\obj\Debug\Eventful Bite App.dll
 C:\Users\male_\Desktop\backup\eventful-bites-app\Eventful Bite App\obj\Debug\Eventful Bite App.pdb
+=======
+>>>>>>> 15402d41423855cfb8d5b4f4126ead27bed6edec
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5

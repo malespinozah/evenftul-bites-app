@@ -7,6 +7,11 @@
 
 <div class="wrap-list">
     <div class="list-column">
+<<<<<<< HEAD
+=======
+        
+<h2><a href="/Restaurant/Details/@Model.Branch.RestaurantId">@Model.Branch.RestaurantName</a> (@Model.Branch.Location)</h2>
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
 
         <h2><a href="/Restaurant/Details/@Model.Branch.RestaurantId">@Model.Branch.RestaurantName</a> (@Model.Branch.Location)</h2>
 
@@ -25,6 +30,7 @@
 
 
 
+<<<<<<< HEAD
         <div style="margin-top: 1.5rem;">
             <a href="/Branch/Edit/@Model.Branch.BranchId" class="btn btn-primary" role="button">Update</a>
             <a href="/Branch/DeleteConfirm/@Model.Branch.BranchId" class="btn btn-danger" role="button">Delete</a>
@@ -35,6 +41,21 @@
         <div>
             <h3>Nearby Events in @Model.Branch.Location</h3>
             @if (Model.Events != null && Model.Events.Any())
+=======
+<div style="margin-top: 1.5rem;">
+    <a href="/Branch/Edit/@Model.Branch.BranchId" class="btn btn-primary" role="button">Update</a>
+    <a href="/Branch/DeleteConfirm/@Model.Branch.BranchId" class="btn btn-danger" role="button">Delete</a>
+    <a href="/Branch/List" class="btn btn-outline-secondary" role="button">Back to Branch List</a>
+</div>
+    </div>
+    <div class="list-column">
+        <div>
+    <h3>Nearby Events in @Model.Branch.Location</h3>
+    @if (Model.Events != null && Model.Events.Any())
+    {
+        <ol>
+            @foreach (var evt in Model.Events)
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
             {
                 <ol>
                     @foreach (var evt in Model.Events)
@@ -45,6 +66,7 @@
                     }
                 </ol>
             }
+<<<<<<< HEAD
             else
             {
                 <p>No upcoming events.</p>
@@ -57,3 +79,20 @@
         </div>
     </div>
 </div>
+=======
+        </ol>
+    }
+    else
+    {
+        <p>No upcoming events.</p>
+    }
+</div>
+<div>
+    <a href="/District/Details/@Model.Events.First().DistrictId" class="btn btn-outline-secondary">
+        Back to District Details
+    </a>
+</div>
+    </div>
+</div>
+
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5

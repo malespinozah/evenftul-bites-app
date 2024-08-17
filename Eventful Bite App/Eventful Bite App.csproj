@@ -246,8 +246,13 @@
     <Content Include="Content\Images\events.jpg" />
     <Content Include="Content\Images\journal.png" />
     <Content Include="Content\Images\listevents.png" />
+<<<<<<< HEAD
     <Content Include="Content\Images\listentries.jpg" />
     <Content Include="Content\Images\restaurants.jpg" />
+=======
+    <Content Include="Content\Images\restaurants.jpg" />
+    <Content Include="Content\Images\listentries.jpg" />
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
     <Content Include="Content\Images\toronto.png" />
     <Content Include="Content\Style\styleApp.css" />
     <Content Include="favicon.ico" />

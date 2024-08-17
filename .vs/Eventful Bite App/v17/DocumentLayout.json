@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\male_\\Desktop\\backup\\eventful-bites-app\\",
   "Documents": [
     {
@@ -9,6 +10,13 @@
     {
       "AbsoluteMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|C:\\Users\\male_\\Desktop\\backup\\eventful-bites-app\\eventful bite app\\views\\branch\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D86C8701-3044-4100-A603-60B11FEA7ECA}|Eventful Bite App\\Eventful Bite App.csproj|solutionrelative:eventful bite app\\views\\branch\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+  "WorkspaceRootPath": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Content\\Style\\styleApp.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Eventful Bite App\\Content\\Style\\styleApp.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
     }
   ],
   "DocumentGroupContainers": [
@@ -17,15 +25,17 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
+<<<<<<< HEAD
           "DockedWidth": 209,
           "SelectedChildIndex": 2,
+=======
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
               "Title": "List.cshtml",
               "DocumentMoniker": "C:\\Users\\male_\\Desktop\\backup\\eventful-bites-app\\Eventful Bite App\\Views\\Branch\\List.cshtml",
@@ -47,6 +57,17 @@
               "ViewState": "AQIAAE0AAAAAAAAAAAAAAFEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-08-17T05:21:53.222Z",
+=======
+              "DocumentIndex": 0,
+              "Title": "styleApp.css",
+              "DocumentMoniker": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Content\\Style\\styleApp.css",
+              "RelativeDocumentMoniker": "Eventful Bite App\\Content\\Style\\styleApp.css",
+              "ToolTip": "C:\\Users\\male_\\Desktop\\evenftul-bites-app\\Eventful Bite App\\Content\\Style\\styleApp.css",
+              "RelativeToolTip": "Eventful Bite App\\Content\\Style\\styleApp.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-17T03:36:35.455Z",
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
               "EditorCaption": ""
             }
           ]
