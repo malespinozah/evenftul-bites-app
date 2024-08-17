@@ -1,15 +1,21 @@
-﻿@model IEnumerable<Eventful_Bite_App.Models.EventDto>
+﻿﻿@model IEnumerable<Eventful_Bite_App.Models.EventDto>
 @{
     ViewBag.Title = "List";
 }
+<div class="wrap-list">
+    <div class="list-image">
+        <img src="~/Content/Images/listevents.png" alt="List" />
+    </div>
+    <div class="list-display">
+        <h2>List All Events</h2>
 
-<h2>List All Events</h2>
-
-<div class="events">
-    @foreach (var Event in Model)
-    {
-        <div>
-            <a href="Details/@Event.EventId"> @Event.EventName</a>
+        <div class="events">
+            @foreach (var Event in Model)
+            {
+                <div>
+                    <a href="Details/@Event.EventId"> @Event.EventName</a>
+                </div>
+            }
         </div>
-    }
+    </div>
 </div>

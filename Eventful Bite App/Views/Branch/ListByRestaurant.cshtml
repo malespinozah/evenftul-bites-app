@@ -1,34 +1,36 @@
-﻿﻿﻿@model IEnumerable<Eventful_Bite_App.Models.BranchDto>
+﻿﻿﻿﻿@model IEnumerable<Eventful_Bite_App.Models.BranchDto>
 @{
     ViewBag.Title = "List";
 }
 
-<h2>List of @ViewData["RestaurantName"] Branches</h2>
-<a style="margin-top:1rem" href="/Restaurant/Details/@ViewData["id"]" class="btn btn-outline-secondary" role="button">Back to Restaurant Details</a>
-<table class="table table-striped  text-nowrap" style="margin-top:2rem;">
-    <thead>
-        <tr>
-            <th scope="col" class="col-3">Restaurant Branch</th>
-            <th scope="col" class="col-1">Cuisine</th>
-            <th scope="col" class="col-1">Budget</th>
-            <th scope="col" class="col-1">Location</th>
-            <th scope="col" class="col-1">Status</th>
-            <th scope="col" class="col-2">Address</th>
-            <th scope="col" class="col-3">Review</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var branch in Model)
-        {
+<div class="wrap-width">
+    <h2>List of @ViewData["RestaurantName"] Branches</h2>
+    <a style="margin-top:1rem" href="/Restaurant/Details/@ViewData["id"]" class="btn btn-outline-secondary" role="button">Back to Restaurant Details</a>
+    <table class="table table-striped  text-nowrap" style="margin-top:2rem;">
+        <thead>
             <tr>
-                <th class="col-3" scope="row"><a href="/Branch/Details/@branch.BranchId">@branch.RestaurantName (@branch.Location)</a></th>
-                <td class="col-1">@branch.Cuisine</td>
-                <td class="col-1">@branch.Budget</td>
-                <td class="col-1">@branch.Location</td>
-                <td class="col-1">@branch.Status</td>
-                <td class="col-2">@branch.Address</td>
-                <td class="col-3"> @branch.Review</td>
+                <th scope="col" class="col-3">Restaurant Branch</th>
+                <th scope="col" class="col-1">Cuisine</th>
+                <th scope="col" class="col-1">Budget</th>
+                <th scope="col" class="col-1">Location</th>
+                <th scope="col" class="col-1">Status</th>
+                <th scope="col" class="col-2">Address</th>
+                <th scope="col" class="col-3">Review</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var branch in Model)
+            {
+                <tr>
+                    <th class="col-3" scope="row"><a href="/Branch/Details/@branch.BranchId">@branch.RestaurantName (@branch.Location)</a></th>
+                    <td class="col-1">@branch.Cuisine</td>
+                    <td class="col-1">@branch.Budget</td>
+                    <td class="col-1">@branch.Location</td>
+                    <td class="col-1">@branch.Status</td>
+                    <td class="col-2">@branch.Address</td>
+                    <td class="col-3"> @branch.Review</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

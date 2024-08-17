@@ -3,36 +3,58 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Events in @Model.SelectedDistrict.DistrictName District</h2>
+<div class="wrap-list">
+    <div class="list-column">
+<<<<<<< HEAD
+        <h2>Events in @Model.SelectedDistrict.DistrictName District</h2>
+=======
+                <h2>Events in @Model.SelectedDistrict.DistrictName District</h2>
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
 
-<ol>
-    @foreach (var Event in Model.KeptEvents)
-    {
+        <ol>
+            @foreach (var Event in Model.KeptEvents)
+            {
 
-        <li>
-            <a href="/Event/Details/@Event.EventId" class="citylist">@Event.EventName</a>
-        </li>
+                <li>
+                    <a href="/Event/Details/@Event.EventId" class="citylist">@Event.EventName</a>
+                </li>
 
-    }
-</ol>
-
-<h3>Restaurant Branches in @Model.SelectedDistrict.DistrictName</h3>
-@if (Model.Branches != null && Model.Branches.Any())
-{
-    <ol>
-        @foreach (var branch in Model.Branches)
+            }
+        </ol>
+    </div>
+    <div class="list-column">
+<<<<<<< HEAD
+        <h3>Restaurant Branches in @Model.SelectedDistrict.DistrictName</h3>
+=======
+                <h3>Restaurant Branches in @Model.SelectedDistrict.DistrictName</h3>
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
+        @if (Model.Branches != null && Model.Branches.Any())
         {
-            <li>
-                <a href="/Branch/Details/@branch.BranchId">@branch.RestaurantName</a>
-            </li>
+            <ol>
+                @foreach (var branch in Model.Branches)
+                {
+                    <li>
+                        <a href="/Branch/Details/@branch.BranchId">@branch.RestaurantName</a>
+                    </li>
+                }
+            </ol>
         }
-    </ol>
-}
-else
-{
-    <p>No branches available for this district.</p>
-}
+        else
+        {
+            <p>No branches available for this district.</p>
+        }
 
-<div>
-    <a href="/District/List" class="goback">Go back to list</a>
+        <div>
+<<<<<<< HEAD
+            <a href="/District/List" class="btn btn-outline-secondary">Go back to list</a>
+=======
+            <a href="/District/List"  class="btn btn-outline-secondary">Go back to list</a>
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
+        </div>
+    </div>
 </div>
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7f0461374ea70ef493ab5a22bb5432fbede14ce5
