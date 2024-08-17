@@ -1,33 +1,32 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+<div class="banner">
+    <div class="wrap-banner">
+        <h1 id="title-app">Discover new places</h1>
+        <p>Explore, have fun & make it last forever.</p>
+    </div>
+</div>
 <main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
-
     <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+        <div class="wrap-category">
+            <div class="category-column">
+                <h2>Events</h2>
+                <img src="~/Content/Images/events.jpg" alt="Alternate Text" />
+                <p>Discover Toronto like never before! Whether you're a local or a visitor, this app is your gateway to the city's dynamic and diverse events. From lively festivals to cozy art shows, get detailed information on all the happenings across the city. Don't miss out  the excitement!</p>
+            </div>
+            <div class="category-column">
+                <h2>Branches</h2>
+                <img src="~/Content/Images/restaurants.jpg" alt="restaurants" />
+                <p>
+                    Branches make it easy to discover the perfect restaurant near you or close to an event you're attending. Whether you're seeking a quick meal nearby or want to dive into the local culinary scene, Branches will guide you to the best options. Find the best spots around your location!
+                </p>
+            </div>
+            <div class="category-column">
+                <h2>Journal</h2>
+                <img src="~/Content/Images/journal.png" alt="Alternate Text" />
+                <p>Capture and share your Toronto adventures with the innovative journaling feature! Document your experiences at restaurants, events, and more, all while preserving your favorite memories. Add your personal reviews and ratings, giving others insights into your journey.</p>
+            </div>
+        </div>
     </div>
 </main>

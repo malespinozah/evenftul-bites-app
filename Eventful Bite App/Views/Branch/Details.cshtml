@@ -5,6 +5,9 @@
     ViewBag.Title = "Details";
 }
 
+<div class="wrap-list">
+    <div class="list-column">
+        
 <h2><a href="/Restaurant/Details/@Model.Branch.RestaurantId">@Model.Branch.RestaurantName</a> (@Model.Branch.Location)</h2>
 
 <h5 style="margin-top:2rem; text-decoration:underline">Branch Details</h5>
@@ -27,9 +30,9 @@
     <a href="/Branch/DeleteConfirm/@Model.Branch.BranchId" class="btn btn-danger" role="button">Delete</a>
     <a href="/Branch/List" class="btn btn-outline-secondary" role="button">Back to Branch List</a>
 </div>
-
-<hr />
-<div>
+    </div>
+    <div class="list-column">
+        <div>
     <h3>Nearby Events in @Model.Branch.Location</h3>
     @if (Model.Events != null && Model.Events.Any())
     {
@@ -52,3 +55,6 @@
         Back to District Details
     </a>
 </div>
+    </div>
+</div>
+

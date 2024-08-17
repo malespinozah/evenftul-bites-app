@@ -3,16 +3,23 @@
     ViewBag.Title = "List";
 }
 
-<h2>List Districts</h2>
+<div class="wrap-list">
+    <div class="list-image">
+        <img src="~/Content/Images/toronto.png" alt="Toronto" />
+    </div>
+    <div class="list-display">
+        <h2>List Districts</h2>
 
-<button style="margin-top:1rem; margin-bottom:0.7rem" type="button" class="btn btn-primary"><a href="/Event/Create" class="restaurant-add" style="color:white; text-decoration:none">Create an Event</a></button>
-<button style="margin-top:1rem; margin-bottom:0.7rem" type="button" class="btn btn-secondary"><a href="/Event/List" style="color:white; text-decoration:none">View All Events</a></button>
+        <button style="margin-top:1rem; margin-bottom:0.7rem" type="button" class="btn btn-primary"><a href="/Event/Create" class="restaurant-add" style="color:white; text-decoration:none">Create an Event</a></button>
+        <button style="margin-top:1rem; margin-bottom:0.7rem" type="button" class="btn btn-secondary"><a href="/Event/List" style="color:white; text-decoration:none">View All Events</a></button>
 
-<div class="districts">
-    @foreach (var District in Model)
-    {
-        <div>
-            <a href="Details/@District.DistrictId"> @District.DistrictName</a>
+        <div class="districts">
+            @foreach (var District in Model)
+            {
+                <div>
+                    <a href="Details/@District.DistrictId"> @District.DistrictName</a>
+                </div>
+            }
         </div>
-    }
+    </div>
 </div>

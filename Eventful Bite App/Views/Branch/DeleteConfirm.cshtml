@@ -3,11 +3,14 @@
     ViewBag.Title = "Delete";
 }
 
-<h2 style="margin-top: 2rem;">Delete @Model.RestaurantName (@Model.Location)</h2>
-<p>Are you sure you want to delete <strong>@Model.Location Branch</strong>?</p>
+<div class="wrap-width">
+
+    <h2 style="margin-top: 2rem;">Delete @Model.RestaurantName (@Model.Location)</h2>
+    <p>Are you sure you want to delete <strong>@Model.Location Branch</strong>?</p>
 
 
-<form style="margin-top:2rem;" action="/Branch/Delete/@Model.BranchId" method="POST">
-    <button style="width:10rem" type="submit" class="btn btn-danger">Confirm Delete</button>
-    <a style="width:8rem;margin-left: 0.2rem;" href="/Branch/Details/@Model.BranchId" class="btn btn-outline-secondary" role="button">Cancel</a>
-</form>
+    <form style="margin-top:2rem;" action="/Branch/Delete/@Model.BranchId" method="POST">
+        <button style="width:10rem" type="submit" class="btn btn-danger">Confirm Delete</button>
+        <a style="width:8rem;margin-left: 0.2rem;" href="/Branch/Details/@Model.BranchId" class="btn btn-outline-secondary" role="button">Cancel</a>
+    </form>
+</div>

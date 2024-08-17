@@ -4,33 +4,35 @@
     ViewBag.Title = "Add";
 }
 
-<h2>Add Branch</h2>
-<h4 style="margin-top:1.5rem">@Model.RestaurantName </h4>
+<div class="wrap-width">
+    <h2>Add Branch</h2>
+    <h4 style="margin-top:1.5rem">@Model.RestaurantName </h4>
 
-<form style="margin-top:1.5rem" method="POST" action="/Branch/Create">
-    <div style="display:none">
-        <input type="text" name="RestaurantId" value="@Model.RestaurantId" />
-    </div>
-    <div class="form-group">
-        <label for="status">Status:</label>
-        <select name="Status" class="form-control" id="status">
-            <option value="Not Visited">Not Visited</option>
-            <option value="Visited">Visited</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="review">Review:</label>
-        <textarea class="form-control" id="review" rows="2"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="location">Location:</label>
-        <input type="text" name="Location" class="form-control" id="location" required>
-    </div>
-    <div style="margin-bottom:2rem;" class="form-group">
-        <label for="address">Address:</label>
-        <input type="text" name="Address" class="form-control" id="address" required>
-    </div>
+    <form style="margin-top:1.5rem" method="POST" action="/Branch/Create">
+        <div style="display:none">
+            <input type="text" name="RestaurantId" value="@Model.RestaurantId" />
+        </div>
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <select name="Status" class="form-control" id="status">
+                <option value="Not Visited">Not Visited</option>
+                <option value="Visited">Visited</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="review">Review:</label>
+            <textarea class="form-control" id="review" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" name="Location" class="form-control" id="location" required>
+        </div>
+        <div style="margin-bottom:2rem;" class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" name="Address" class="form-control" id="address" required>
+        </div>
 
-    <button style="width:10rem" type="submit" class="btn btn-primary">Add Branch</button>
-    <a style="margin-left: 0.2rem;" href="/Restaurant/Details/@Model.RestaurantId" class="btn btn-outline-secondary" role="button">Cancel</a>
-</form>
+        <button style="width:10rem" type="submit" class="btn btn-primary">Add Branch</button>
+        <a style="margin-left: 0.2rem;" href="/Restaurant/Details/@Model.RestaurantId" class="btn btn-outline-secondary" role="button">Cancel</a>
+    </form>
+</div>

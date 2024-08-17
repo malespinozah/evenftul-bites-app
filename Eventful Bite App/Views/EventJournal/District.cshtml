@@ -3,14 +3,16 @@
     ViewBag.Title = "List";
 }
 
-<h2>Eventful Bite Journal</h2>
-<br>
-<h3>1. Select District</h3>
-<div class="districts">
-    @foreach (var District in Model)
-    {
-        <div>
-            <a href="Details/@District.DistrictId"> @District.DistrictName</a>
-        </div>
-    }
+<div class="wrap-width">
+    <h2>Eventful Bite Journal</h2>
+    <br>
+    <h3>1. Select District</h3>
+    <div class="districts">
+        @foreach (var District in Model)
+        {
+            <div>
+                <a href="Details/@District.DistrictId"> @District.DistrictName</a>
+            </div>
+        }
+    </div>
 </div>

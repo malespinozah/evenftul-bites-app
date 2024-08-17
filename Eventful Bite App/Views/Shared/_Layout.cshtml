@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Evenful Bite App</title>
+    <title>@ViewBag.Title - Eventful Bite App</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link href="~/Content/Style/styleApp.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
@@ -18,24 +18,22 @@
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Districts", "List", "District", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Restaurants", "List", "Restaurant", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Add Journal", "District", "EventJournal", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Journal", "List", "Journal", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navlink" })</li>
+                    <li>@Html.ActionLink("Districts", "List", "District", new { area = "" }, new { @class = "navlink" })</li>
+                    <li>@Html.ActionLink("Restaurants", "List", "Restaurant", new { area = "" }, new { @class = "navlink" })</li>
+                    <li>@Html.ActionLink("Add Journal", "District", "EventJournal", new { area = "" }, new { @class = "navlink" })</li>
+                    <li>@Html.ActionLink("Journal", "List", "Journal", new { area = "" }, new { @class = "navlink" })</li>
                 </ul>
-                 @Html.Partial("_LoginPartial")
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </nav>
-    <div class="container body-content">
+    <div class="wrap-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Evenful Bite App</p>
-        </footer>
     </div>
-
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Evenful Bite App</p>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

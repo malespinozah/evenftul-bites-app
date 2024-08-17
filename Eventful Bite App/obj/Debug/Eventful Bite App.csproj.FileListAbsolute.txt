@@ -467,3 +467,4 @@ C:\Users\roxie\Documents\Humber works\evenftul-bites-app\Eventful Bite App\obj\D
 C:\Users\roxie\Documents\Humber works\evenftul-bites-app\Eventful Bite App\obj\Debug\Eventful Bite App.pdb
 C:\Users\roxie\Documents\Humber works\evenftul-bites-app\Eventful Bite App\obj\Debug\Eventful_Bite_App.Migrations.JournalsListing.resources
 C:\Users\cherr\Documents\Humber Courses\HTTP5226\evenftul-bites-app\Eventful Bite App\obj\Debug\Eventful_Bite_App.Migrations.JournalsListing.resources
+C:\Users\male_\Desktop\evenftul-bites-app\Eventful Bite App\obj\Debug\Eventful_Bite_App.Migrations.JournalsListing.resources
